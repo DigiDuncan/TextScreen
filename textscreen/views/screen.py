@@ -35,7 +35,7 @@ class ScreenView(arcade.View):
         pass
 
     def on_key_press(self, symbol: int, modifiers: int):
-        print(f"wanted {arcade.key.F} and modifiers to be & 2, got {symbol} and {modifiers} ({modifiers & 2})")
+        print(f"wanted {arcade.key.F} and modifier to be & 2, got {symbol} and {modifiers} ({modifiers & 2})")
         if symbol == arcade.key.F and modifiers & arcade.key.MOD_CTRL:
             self.filter_on = not self.filter_on
 

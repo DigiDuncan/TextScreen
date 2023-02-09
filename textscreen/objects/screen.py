@@ -6,7 +6,7 @@ class TextScreen(Section):
     def __init__(self, left: int, bottom: int, width: int, height: int, **kwargs):
         super().__init__(left, bottom, width, height, name = "TextScreen",
             accept_keyboard_keys = True, accept_mouse_events = True, local_mouse_coordinates = True,
-            prevent_dispatch_view = None, prevent_dispatch = None, **kwargs)
+            prevent_dispatch_view = {False}, prevent_dispatch = {False}, **kwargs)
 
         window = arcade.get_window()
 
@@ -31,10 +31,10 @@ class TextScreen(Section):
         self.screen_height = self.height // test_character.content_height
 
     def on_update(self, delta_time: float):
-        return super().on_update(delta_time)
+        pass
 
     def on_key_press(self, symbol: int, modifiers: int):
-        return super().on_key_press(symbol, modifiers)
+        pass
 
     def on_draw(self):
         if self.view.filter_on:
